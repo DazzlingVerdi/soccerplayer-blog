@@ -1,6 +1,6 @@
 // CUSTOM VARIABLES ////
 :root {
-    --color-primary: #ff0000a2;
+    --color-primary: #c00303b9;
     --color-secondary: #101010;
     --color-tertiary: #ff9800;
     --color-fourth:#f44336;
@@ -8,13 +8,28 @@
     --color-grey--light-1:#eee;
     --color-grey-light-2:#ddd;
 
+    --white:#fff;
+    --black:#000;
+
 
     --main-text-color: #444;
     --sub-text-color: #666;
 
     --main-font-family:'Kanit', sans-serif;
-    --font-display: sans-serif;
+    --font-display: 'Lato', sans-serif;
+}
 
+// UTILITY CLASSES //// 
+.mb-small { margin-bottom:1.5rem; }
+.mb-small-2x { margin-bottom:2rem; }
+.mb-medium { margin-bottom:3rem; }
+
+.mt-small { margin-top:1rem; }
+.mt-small-2x {margin-top: 2rem; }
+
+// MIXINS //// 
+@mixin transition {
+    transition: all .2s ease-in;
 }
 
 html {
@@ -28,6 +43,11 @@ html {
     margin:0;
     padding:0;
     box-sizing: inherit;
+}
+
+body {
+    font-family: var(--font-display);
+    line-height: 1.3;
 }
 
 

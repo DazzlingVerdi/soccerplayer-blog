@@ -1,47 +1,58 @@
 .container {
 
     display: grid;
-    grid-template-rows: 80vh repeat(4, minmax(min-content, 1fr)) 20vh 15vh;
-    grid-template-columns: 8rem repeat(8, 1fr);
+    grid-template-rows: 85vh repeat(4, min-content) 35vh 20vh;
+    grid-template-columns: [sidebar-start ] 12rem [sidebar-end full-start] minmax(8rem, 1fr) [center-start] repeat(8, [col-start] minmax(10rem, 1fr) [col-end]) [center-end] minmax(8rem, 1fr) [full-end];
 
 }
 
 .sidebar {
-    background-color: teal;
+    background-color:#ddd;
+    grid-column: sidebar-start / sidebar-end;
+    height:100vh;   
+    position: fixed;
 
 }
 
 .header {
     background-color:lightcoral;
+    grid-column: full-start / full-end;
+    
 
 }
 
 .news {
     background-color:lightgreen;
+    grid-column: full-start / full-end;
 
 }
 
 .features {
     background-color: purple;
+    grid-column: full-start / full-end;
 
 }
 
 .about {
     background-color: maroon;
+    grid-column: full-start / full-end;
 
 }
 
 .social-media {
     background-color: mediumvioletred;
+    grid-column: full-start / full-end;
 
 }
 
 .banner {
     background-color: olive;
+    grid-column: full-start / full-end;
 
 }
 
 .footer {
     background-color: orange;
+    grid-column: full-start / full-end;
 
 }
