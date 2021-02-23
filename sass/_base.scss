@@ -1,0 +1,34 @@
+// CUSTOM VARIABLES ////
+:root {
+    --color-primary: #ff0000a2;
+    --color-secondary: #101010;
+    --color-tertiary: #ff9800;
+    --color-fourth:#f44336;
+
+    --color-grey--light-1:#eee;
+    --color-grey-light-2:#ddd;
+
+
+    --main-text-color: #444;
+    --sub-text-color: #666;
+
+    --main-font-family:'Kanit', sans-serif;
+    --font-display: sans-serif;
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+
+
+

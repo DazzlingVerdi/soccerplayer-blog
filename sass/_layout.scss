@@ -1,0 +1,47 @@
+.container {
+
+    display: grid;
+    grid-template-rows: 80vh repeat(4, minmax(min-content, 1fr)) 20vh 15vh;
+    grid-template-columns: 8rem repeat(8, 1fr);
+
+}
+
+.sidebar {
+    background-color: teal;
+
+}
+
+.header {
+    background-color:lightcoral;
+
+}
+
+.news {
+    background-color:lightgreen;
+
+}
+
+.features {
+    background-color: purple;
+
+}
+
+.about {
+    background-color: maroon;
+
+}
+
+.social-media {
+    background-color: mediumvioletred;
+
+}
+
+.banner {
+    background-color: olive;
+
+}
+
+.footer {
+    background-color: orange;
+
+}
