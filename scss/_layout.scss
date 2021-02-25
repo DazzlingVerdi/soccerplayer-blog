@@ -19,8 +19,12 @@
     grid-column: full-start / full-end;
     background-image: url(/img/banner-masterclass.jpg);
     background-size: cover;
-    
+    border-bottom: 6px solid var(--color-primary);
 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
 }
 
 .news {

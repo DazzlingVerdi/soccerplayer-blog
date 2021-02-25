@@ -106,4 +106,51 @@
     color: var(--color-primary);
 }
 
+.heading-primary {
+    font-family: var(--main-font-family);
+    font-size: 4.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color:var(--color-grey--light-1);
+}
+
 // HEADER STYLE //// 
+.header__box {
+    display: inline-block;
+    padding:2rem 3rem;
+    width:58%;
+    line-height: .9;
+
+    &-link {
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-family: inherit;
+            font-size: 1.7rem;
+            font-weight: 400;
+            text-decoration: none;
+            color: var(--white);
+            letter-spacing: 1px;
+            padding:1.4rem 7rem;
+            background-color: var(--black);
+            border:2px solid var(--white);
+            border-radius: 100px;
+            @include transition;
+        }
+
+        &::after {
+            display: inline-block;
+            content:"\003e";
+            margin-left:.3rem;
+            margin-top: -.3rem;
+            vertical-align: middle;
+        }
+
+        &:hover,
+        &:active {
+            background-color: var(--white);
+            color: var(--color-primary);
+        }
+    }
+}
