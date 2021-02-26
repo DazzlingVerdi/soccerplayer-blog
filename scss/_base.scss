@@ -8,6 +8,9 @@
     --color-grey--light-1:#eee;
     --color-grey-light-2:#ddd;
 
+    --color-grey-dark-1:#191919;
+    --color-grey-dark-2:#333;
+
     --white:#fff;
     --black:#000;
 
@@ -26,6 +29,8 @@
 
 .mt-small { margin-top:1rem; }
 .mt-small-2x {margin-top: 2rem; }
+.mt-small-3x {margin-top: 3rem; }
+.mt-small-4x {margin-top: 4rem; }
 
 // MIXINS //// 
 @mixin transition {
