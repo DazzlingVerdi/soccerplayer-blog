@@ -122,6 +122,10 @@
     font-weight: 300;
     text-transform: uppercase;
     color: var(--color-tertiary);
+
+    &--red {
+        color: var(--color-fourth);
+    }
 }
 
 // HEADER STYLE //// 
@@ -187,6 +191,10 @@
         border-right: 1px solid var(--color-grey-dark-2);
         border-bottom: 6px solid var(--color-tertiary);
 
+        // BORDER BOTTOM COLOR CHANGE //// 
+        &-bb {
+            border-bottom: 6px solid var(--color-fourth);
+        }
     }
 
 
@@ -249,5 +257,9 @@
         filter: opacity(60%);
     }
 
-   
+    &__box--red:hover > * {
+        background-color: var(--color-fourth);
+
+    }
+
 }
