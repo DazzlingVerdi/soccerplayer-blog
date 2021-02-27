@@ -42,13 +42,13 @@
 }
 
 .about {
-    background-color: maroon;
+    background-color:var(--color-grey-dark-1);
     grid-column: full-start / full-end;
 
 }
 
 .social-media {
-    background-color: mediumvioletred;
+    background-color:var(--color-grey-dark-1);
     grid-column: full-start / full-end;
 
 }
