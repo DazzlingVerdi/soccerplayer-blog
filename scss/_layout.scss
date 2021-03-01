@@ -1,8 +1,8 @@
 .container {
 
     display: grid;
-    grid-template-rows: 85vh repeat(4, min-content) 35vh 20vh;
-    grid-template-columns: [sidebar-start ] 12.25rem [sidebar-end full-start] minmax(8rem, 1fr) [center-start] repeat(8, [col-start] minmax(10rem, 1fr) [col-end]) [center-end] minmax(8rem, 1fr) [full-end];
+    grid-template-rows: 85vh repeat(4, min-content) 40vh 25vh;
+    grid-template-columns: [sidebar-start ] 12.25rem [sidebar-end full-start] minmax(5rem, 1fr) [center-start] repeat(8, [col-start] minmax(10rem, 1fr) [col-end]) [center-end] minmax(5rem, 1fr) [full-end];
 
 }
 
@@ -31,8 +31,6 @@
     background-color:var(--color-grey-dark-1);
     grid-column: full-start / full-end;
 
-    
-
 }
 
 .features {
@@ -54,13 +52,13 @@
 }
 
 .banner {
-    background-color: olive;
+    background-color: var(--black);
     grid-column: full-start / full-end;
 
 }
 
 .footer {
-    background-color: orange;
+    background-color:var(--color-grey-dark-1);
     grid-column: full-start / full-end;
 
 }
