@@ -45,8 +45,12 @@
 
 // MEDIA QUERY MANAGER
 @mixin for-size($size) {
+    @if $size == small-phone {
+        @media (max-width:31.25em) { @content; }
+    }
+
     @if $size == phone {
-        @media (max-width:37.5em) { @content;}
+        @media (max-width:43.75em) { @content;}
     }
 
     @if $size == tablet-port {
@@ -69,12 +73,14 @@ html {
     font-size: 62.5%;
 
     //MEDIA QUERY ////// 
-    @include for-size(tablet-port) {
-        font-size: 37.5%;
-    }
 
     @include for-size(desktop) {
         font-size: 50%;
+    }
+
+    @include for-size(phone) {
+        font-size: 37.5%;
+       
     }
 
 

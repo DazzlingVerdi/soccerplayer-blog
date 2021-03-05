@@ -15,15 +15,23 @@
     }
 
     @include for-size(tablet-port) {
-        grid-template-rows: 10rem calc(100vh - 10rem) repeat(4, min-content) 20vw 25vh;
+        grid-template-rows: 8rem calc(90vh - 8rem) repeat(4, min-content) 20vw 25vh;
         grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] minmax(5rem, 1fr) [full-end];
+    }
+
+    @include for-size(phone) {
+        grid-template-rows: 6rem calc(70vh - 6rem) repeat(4, min-content) 20vw 25vh;
+    }
+
+    @include for-size(small-phone) {
+        grid-template-rows: 6rem calc(60vh - 6rem) repeat(4, min-content) 20vw 16vh;
     }
 
 
 }
 
 .sidebar {
-    background-color:#000;
+    background-color: var(--color-secondary);
     grid-column: sidebar-start / sidebar-end;
     height:100vh; 
     position: fixed;
@@ -35,7 +43,8 @@
         position: relative;
         top:0;
         left:0;
-        height:10rem;
+        height:8rem;
+        padding-top:2rem;
 
     }
 
@@ -51,6 +60,11 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    //MEDIA QUERY ////// 
+    @include for-size(small-phone) {
+        background-position: bottom;
+    }
     
 }
 
