@@ -4,6 +4,11 @@
     flex-direction: column;
     justify-content: space-between;
     padding-bottom:2rem;
+    overflow: hidden;
+
+    @include for-size(tablet-port) {
+        flex-direction: row;
+    }
     
 
     &__icon-search {
@@ -17,12 +22,23 @@
             width:1.8rem;
             height:1.8rem;
             margin:-.4rem .2rem 0 0;
+
+            @include for-size(tablet-port) {
+                visibility: visible;
+            }
         }
     }
 
     &__wrap {
         background-color: var(--color-secondary);
         text-align: left;
+        position: relative;
+
+        //MEDIA QUERY ////// 
+        @include for-size(tablet-port) {
+            display: flex;
+            align-items: center;
+           }
         
     }
 
@@ -30,16 +46,41 @@
         display: flex;
         justify-content: center;
         text-decoration: none;
-        margin:1.7rem 0;      
+        margin:1.7rem 0;    
     }
 
     &__pic {
         display: block;
         width:10rem;
+
+        //MEDIA QUERY ///// 
+        @include for-size(tablet-port) {
+            width:6rem;
+            margin: 2rem;
+        }
     }
 
     &__list {
         list-style: none;
+
+        @include for-size(tablet-port) {
+            visibility: visible;
+            display: flex;
+            align-items:center;
+        }
+
+         &--hidden {
+
+          //MEDIA QUERY ////
+          @include for-size(tablet-land) {
+              visibility: hidden;
+          }
+
+          @include for-size(tablet-port) {
+            visibility: visible;
+            display: flex;
+          }
+        }
     }
 
     &__item {
@@ -59,6 +100,20 @@
             background-color: transparent;
         }
 
+
+        //MEDIA QUERY ////// 
+        @include for-size(tablet-port) {
+           margin-right:1.2rem;
+        }
+
+        &--social {
+
+            //MEDIA QUERY /////// 
+            @include for-size(tablet-port) {
+                margin-right: 0;
+            }
+        }
+
     }
 
 
@@ -74,6 +129,10 @@
             text-decoration: none;
             color: var( --main-text-color);
             @include transition;  
+
+            @include for-size(tablet-port) {
+                padding:0;
+            }
         }
 
         &--search {
@@ -81,6 +140,13 @@
             &:visited {
                 font-size: 1.2rem;
                 color:var(--sub-text-color);
+            }
+
+             //MEDIA QUERY ////
+             @include for-size(tablet-land) {
+               visibility: visible;
+               position: absolute;
+               top:18.5rem;
             }
         }
 
@@ -93,12 +159,44 @@
                 text-transform: none;
                 font-weight: 300;
                 padding:.6rem 2.5rem;
+
+                @include for-size(tablet-port) {
+                    visibility: hidden;
+                    padding:0;
+                }
+            }
+
+            @include for-size(tablet-land) {
+                visibility: visible;
             }
         }
     }
 
     &__item:hover &__link {
         color: var(--white);
+    }
+
+    //HAMBURGER MENU //// 
+    &__menu {
+        display: block;
+        cursor: pointer;
+        display: none;
+
+        &-line {
+            background-color: var(--white);
+            height:4px;
+            width:35px;
+            margin-bottom:.6rem;
+            border-radius: 10px;
+            margin-left: 3.5rem;
+        }
+
+         //MEDIA QUERY ////
+         @include for-size(tablet-land) {
+            display: block;
+            position: absolute;
+            top:15rem;
+        }
     }
 }
 
@@ -235,23 +333,36 @@
     &__container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        overflow: hidden;
+
+        @include for-size(tablet-land) {
+            grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        }
     }
 
     &__heading {
         padding:.9rem 1.5rem;
+        height:100%;
        
     }
 
     &__img-box {
         width:100%;
         overflow: hidden;
-
     }
+
+  
 
     &__box {
         border-right: 1px solid var(--color-grey-dark-2);
         border-bottom: 6px solid var(--color-tertiary);
         border-top: 1px solid var(--color-grey-dark-2);
+
+        //MEDIA QUERY ////// 
+        @include for-size(tablet-land) {
+            overflow: hidden;
+        }
+
 
         // BORDER BOTTOM COLOR CHANGE //// 
         //LIGHT RED// 
@@ -319,13 +430,6 @@
                 margin-bottom: 7.5rem;
             }
         }
-
-        &--big-3x {
-            &:link,
-            &:visited {
-                margin-bottom: 7.5rem;
-            }
-        }
     }
 
     &__date {
@@ -375,10 +479,13 @@
         position: relative;
         border-top: 1px solid var(--color-grey-dark-2);
         border-right: 1px solid var(--color-grey-dark-2);
+        
+
 
         // BORDER BOTTOM COLOR CHANGES //// 
         &--b {
             border-bottom: 6px solid var(--facebook);
+            border-left: 2px solid transparent;
         }
 
         &--lb {
@@ -408,6 +515,12 @@
 
     &__heading-box {
         height:20vh;
+
+        //MEDIA QUERY //////
+        @include for-size(tablet-land) {
+            height:25vh;
+
+        }
          
         &--1 {
             background-image: linear-gradient(rgba(0,0,0, .3), rgba(0,0,0, .3)), url(/img/bg-img-1.jpg);
@@ -434,6 +547,7 @@
         display: flex;
         margin-left:.7rem;
         padding-top:1rem;
+
 
         &-icon {
             width:2rem;
@@ -520,13 +634,19 @@
         color: var(--white);
     }
 
-    // FACEBOOK BOX COLOR //// 
+    // TWITTER BOX COLOR //// 
     &__bg-twitter:hover {
         background-color: var(--twitter);
+        
     }
 
     &__wrap:hover &__bg-twitter {
         background-color: var(--twitter);
+
+        //MEDIA QUERY ////// 
+        @include for-size(tablet-land) {
+            height:auto;
+        }
     }
 
     // INSTAGRAM BOX COLOR //// 
@@ -541,6 +661,7 @@
     // POPULAR BOX COLOR //// 
     &__wrap--fuscia:hover {
         background: var(--popular-box);
+
     }
 
 }
