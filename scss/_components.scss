@@ -180,11 +180,16 @@
                     visibility: hidden;
                     padding:0;
                 }
+
+                @include for-size(smaller-phone) {
+                    display: none;
+                }
             }
 
             @include for-size(tablet-land) {
                 visibility: visible;
             }
+
         }
     }
 
@@ -309,6 +314,7 @@
     padding:2rem 3rem;
     width:58%;
     line-height: .9;
+
 
     &-link {
         &:link,

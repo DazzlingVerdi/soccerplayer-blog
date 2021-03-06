@@ -27,6 +27,11 @@
         grid-template-rows: 6rem calc(60vh - 6rem) repeat(4, min-content) 20vw 16vh;
     }
 
+    @include for-size(smaller-phone) {
+        grid-template-rows: 6rem calc(50vh - 6rem) repeat(4, min-content) 20vw 16vh;
+        
+    }
+
 
 }
 

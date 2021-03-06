@@ -45,6 +45,10 @@
 
 // MEDIA QUERY MANAGER
 @mixin for-size($size) {
+    @if $size == smaller-phone {
+        @media (max-width:26.25em) { @content; }
+    }
+
     @if $size == small-phone {
         @media (max-width:31.25em) { @content; }
     }
@@ -81,6 +85,10 @@ html {
     @include for-size(phone) {
         font-size: 37.5%;
        
+    }
+
+    @include for-size(smaller-phone) {
+        font-size: 33%;
     }
 
 
