@@ -236,6 +236,13 @@
     font-size: 6.5rem;
     font-weight: 400;
     color: var(--color-primary);
+
+    // NEWS-PAGE STYLING 
+    &--news-page {
+        text-transform: uppercase;
+        font-size: 4rem;
+        font-weight: 600;
+    }
 }
 
 .heading-tertiary {
@@ -490,6 +497,54 @@
 
     &__box--green:hover > * {
         background-color: limegreen;
+    }
+
+    // News Page Footer 
+    &__footer {
+        display: flex;
+        margin:4rem 10rem;
+        justify-content:center;
+        align-items: center;
+        list-style: none;
+
+        &-item {
+            border: 1px solid var(--sub-text-color);
+            border-radius: 6px;
+            padding:.7rem 1.5rem;
+            @include transition;
+            
+            &:not(:last-child) {
+                margin-right: .7rem;
+            }
+
+            &--active {
+                background-color: var(--color-primary);
+                border:none;
+            }
+
+            &:hover {
+                background-color: var(--sub-text-color);
+            }
+
+        }
+
+        &-link {
+            &:link,
+            &:visited {
+                display: inline-block;
+                text-decoration: none;
+                font-size: 1.8rem;
+                font-weight: 300;
+                color:var(--color-grey--light-1);
+            }
+        }
+
+        &-span {
+            color: var(--color-grey--light-1);
+            margin-right:.7rem;
+            font-size: 1.5rem;
+        }
+
     }
 
 
